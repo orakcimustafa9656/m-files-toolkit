@@ -1,0 +1,47 @@
+M-FILES TOOLKIT - GÜNCEL TERMINAL MENÜSÜ (Windows Terminal, iki bölmeli)
+
+BAŞLATMA
+  Uygulamanın tek giriş noktası baslat.bat dosyasıdır.
+  baslat.bat dosyasına çift tıklayın. Windows Terminal açılır: solda menü, sağda modül paneli.
+  Eski tek panelli menü kaldırılmıştır; main.ps1 ve main.bat artık pakette bulunmaz.
+
+KULLANIM
+  - Yukarı/Aşağı ile modüller arasında gezin, Enter ile seçili modülü çalıştırın.
+  - Numara yazın (örnek: 16) ya da ad yazın (örnek: kur, inşaat, excel) ve Enter'a basın.
+  - Esc aramayı temizler, F5 modül listesini ve fiziksel grupları yeniler, Q + Enter çıkar.
+  - Modül bitince sağ panel bir tuşa basmanızı ister; ardından bekleme ekranına döner ve odak menüye geçer.
+  - Odak geçmezse Alt+Sol ok / Alt+Sağ ok ile bölmeler arasında geçebilirsiniz.
+
+FİZİKSEL MODÜL VE GRUP YAPISI
+  Menü grupları yalnızca modules klasörünün gerçek birinci seviye klasörlerinden üretilir.
+  Her grup klasörünün içinde modül klasörleri, her modül klasörünün içinde module.meta.json bulunmalıdır.
+  Modüllerin grup adı veya sırası meta dosyasından ya da modül numarasından alınmaz.
+  Grup adı fiziksel klasör adıdır; grup sırası klasör adının başındaki sayısal öneke göre belirlenir.
+  Grup sayısı sınırlı değildir. Yeni klasör ekleyebilir, silebilir veya yeniden adlandırabilirsiniz.
+  Değişiklikleri menü açıkken F5 ile yenileyebilirsiniz.
+
+  Örnek:
+    modules\
+      01- DEFTER YEDEKLEME\
+        01- edefterkontrol\module.meta.json
+        02- edefterzip\module.meta.json
+      02- DEFTER VE GİB\
+        05- gibberatoku\module.meta.json
+      03- LUCA\
+        06- muavindenmesaj\module.meta.json
+      04- HESAPLAMA\
+      05- BELGE VE SENET\
+      06- EXCEL\
+
+  module.meta.json içindeki Key modülü tanımlamak ve kendi grubu içindeki sıralamayı
+  yapmak için kullanılır; grup belirlemek için kullanılmaz.
+
+GÖRÜNÜM
+  Sol panelin üstündeki açılış/kimlik alanı kalıcıdır. Açılış efekti sol panelde satır satır gösterilir.
+  Arama satırındaki ▶ işareti yeşildir. Seçili modül satırı turuncu vurgulanır.
+  Sağ panel açılış animasyonu göstermez; yalnızca modül bekleme ve çalıştırma alanıdır.
+
+AYARLAR VE GEREKSİNİMLER
+  Sağ panelin genişliği baslat.bat içindeki -s 0.66 değeriyle ayarlanır.
+  Windows Terminal (wt.exe) gerekir. Sağ panel STA modunda açılır (Excel COM ve WinForms için).
+  Terminal fontu ve diğer görünüm ayarları Windows Terminal profilinden yönetilir.

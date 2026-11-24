@@ -1,0 +1,27 @@
+﻿M-Files Toolkit 1.5.0 - 2026-11-24
+
+Veri mimarisi
+- Kullanici verisi Data\ altinda, Git disinda: .gitignore yalnizca /Data/ kuralini icerir.
+- Veri yollari: Get-MFTModuleDataPath, Get-MFTCommonDataPath, Get-MFTTempPath, Get-MFTModuleTempPath (lib\data.ps1). Klasorler ilk ihtiyac aninda olusur.
+- Insaat: proje JSON dosyalari Projects\, Excel raporlari Reports\ altina yazilir ($GLOBAL:ProjectReportFolder).
+- GIB Berat Goruntuleme ve Muavinden Mesaj gecici dosyalari Data\Temp\Modules\<Id>\ altina alindi.
+- Oturum (menu <-> panel) klasoru Data\Temp\Sessions\ altina alindi; olu oturum klasorleri acilista temizlenir.
+- Kaldirildi: MFT-Data-Backup.ps1, MFT-Data-Migrate.ps1, DataVersion.json, DATA-ARCHITECTURE.md. Veri tasimak icin Data klasorunu elle kopyalamak yeterlidir.
+
+Standartlar
+- Surum tek kaynaktan: version.txt (1. satir surum, 2. satir tarih).
+- Modul klasoru ve betik adi ASCII ve Id ile ayni: modules\<NN- grup>\<KK- id>\<id>.ps1. module.meta.json icinde ScriptFileName artik gerekmez (varsayilan <Id>.ps1).
+- lib dosya adlari kucuk harf: ortak.ps1, menu.ps1, panel.ps1, data.ps1.
+
+Guncelleyici (yeniden yazildi)
+- Ayri pencere yok; sonuc mesaji acilis ekraninin en ustunde gosterilir.
+- Surum karsilastirmasi [version] tipiyle; .git varsa (gelistirici kopyasi) dosyalara dokunulmaz, git commit bilgisi gosterilir.
+- Indirme Data\Temp\Update\ altina; arsiv yapisi dogrulanir; Data ve .git atlanir; degismeyen dosyaya dokunulmaz (SHA-256).
+- Yeni surumde olmayan dosyalar yalnizca modules\ ve lib\ altindan silinir (hayalet modul olmaz).
+- version.txt en son yazilir; updater.ps1 ve baslat.bat .new olarak birakilir, baslat.bat uygular.
+- Baska bir Toolkit oturumu aciksa guncelleme ertelenir (islem numarasi + komut satiri dogrulamasi).
+- Rollback/yedekleme sistemi kaldirildi.
+
+Panel duzeni
+- Menu genisligi Data\Common\Config\terminal.json icindeki MenuWidth ile ayarlanir (varsayilan 0.30; sag panel kalan alan).
+- Sag panel kapaninca menu, menu kapaninca sag panel kapanir. Modul calisirken Q ile cikis engellenir.

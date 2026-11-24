@@ -1,0 +1,7 @@
+M-Files Toolkit 1.4.4
+- Modüller altı fiziksel grup klasörüne taşındı.
+- Menü grupları yalnızca modules\<Grup>\<Modül>\module.meta.json fiziksel yapısından üretilir.
+- Modül Key numarasına göre grup belirleyen eski eşleştirme kaldırıldı.
+- Ana menü çizimi satır farkı üzerinden yapılır; yön tuşlarında tüm ekran temizlenmez.
+- Eski tek panelli main.ps1 de meta dosyalarını alt klasörlerde bulacak şekilde güncellendi.
+- Modül betikleri ve modül içi dosyalar içerik olarak değiştirilmedi.

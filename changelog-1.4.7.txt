@@ -1,0 +1,10 @@
+M-Files Toolkit 1.4.7 - 2026-11-21
+
+- Tum modullere sabit Id alani eklendi; Id menü sirasi ve klasor numarasindan bagimsizdir.
+- Merkezi Data/Modules/<Id>/Config, Data, Logs, Reports, Projects ve Cache veri yolu altyapisi eklendi.
+- E-Defter Kontrol, E-Defter ZIP, Yerel Yedek, Optik Medya, GIB Berat Oku, Luca Muavinden Mesaj, Binek Oto Alim ve Insaat modullerinin kalici veri yolları Data altina alindi.
+- Yerel Yedek loglari yedek hedefinden bagimsiz olarak Data/Modules/yerelyedek/Logs altina tasindi.
+- Git icin tek kullanici verisi haric tutma kurali /Data/ eklendi.
+- Updater ve rollback Data klasorune dokunmayacak sekilde korumaya alindi.
+- Eski veriler icin MFT-Data-Migrate.ps1; kullanici verisi yedekleme/geri yukleme icin MFT-Data-Backup.ps1 eklendi.
+- Her modulun veri sema surumunu izlemek icin DataVersion.json altyapisi eklendi.

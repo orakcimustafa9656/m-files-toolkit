@@ -1,0 +1,7 @@
+M-Files Toolkit 1.4.6 - 2026-11-16
+
+- Eski tek panelli menu tamamen kaldirildi: main.ps1 ve main.bat paketten cikarildi.
+- baslat.bat, uygulamanin tek resmi giris noktasi olarak birakildi.
+- Sol menudeki arama satiri ▶ gostergesi turuncudan yesile alindi.
+- Kullanici kilavuzu fiziksel grup klasorlerini esas alacak sekilde guncellendi.
+- Yeni iki panelli menunun ve 23 modulun calisma dosyalarina dokunulmadi.

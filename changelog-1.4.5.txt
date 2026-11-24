@@ -1,0 +1,4 @@
+M-Files Toolkit 1.4.5
+- 1.4.4 sürümünde menü ekranı boş satırlar içerdiğinde oluşan Lines parametre bağlama hatası giderildi.
+- Write-MenuScreenDiff, boş metin satırlarını geçerli ekran satırı olarak kabul eder.
+- Menü çizim mantığı, fiziksel grup klasörleri ve modül betikleri değiştirilmedi.
