@@ -2764,10 +2764,11 @@ while ($true) {
         }
 
         'Q' {
-            Show-Header
-            Write-Host ''
-            Write-Host '🚪 Programdan çıkılıyor. İyi günler!' -ForegroundColor Cyan
-            Start-Sleep -Milliseconds 500
+            if (-not $env:MFT_MODULE_ID) {
+                Write-Host ''
+                Write-Host '🚪 Programdan çıkılıyor. İyi günler!' -ForegroundColor Cyan
+                Start-Sleep -Milliseconds 500
+            }
             return
         }
 

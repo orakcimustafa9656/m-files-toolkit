@@ -1356,7 +1356,14 @@ function Show-EkMainMenu {
     switch ($choice.ToUpper()) {
       '1' { Start-EkReport }
       '2' { Show-EkSettingsMenu; Load-EkRoot }
-      'Q' { return }
+      'Q' {
+        if (-not $env:MFT_MODULE_ID) {
+          Write-Host ''
+          Write-Host '🚪 Programdan çıkılıyor. İyi günler!' -ForegroundColor Cyan
+          Start-Sleep -Milliseconds 500
+        }
+        return
+      }
       default {
         Write-Host '[!] Geçersiz seçim.' -ForegroundColor Red
         Wait-EkKey
