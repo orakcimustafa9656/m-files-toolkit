@@ -1,0 +1,12 @@
+﻿M-FILES Toolkit v1.5.1
+Tarih: 24.11.2026
+
+[İYİLEŞTİRMELER]
+- Modüllerin çıkış davranışları standartlaştırıldı.
+- Ortak panel üzerinden çalıştırılan modüllerde gereksiz çıkış mesajları kaldırıldı.
+- Bağımsız çalıştırılan modüllerin kendi çıkış mesajları korundu.
+- E-Defter ZIP modülündeki gereksiz ekran yenilemesi kaldırıldı.
+
+[GENEL]
+- Modül kullanım deneyimi iyileştirildi.
+- Mevcut modül işlevleri korunarak menü davranışları düzenlendi.
